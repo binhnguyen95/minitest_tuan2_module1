@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" placeholder="Cạnh a" id="canha">
+<input type="number" placeholder="Cạnh b" id="canhb">
+<input type="number" placeholder="Cạnh c" id="canhc">
+<input type="button" value="Bấm vào đêi" onclick="tinhketqua()"> <br>
+<p id="ketqua"></p>
+</body>
+</html>
+
+<script>
+    function tinhketqua() {
+        let a = Number(document.getElementById('canha').value);
+        let b = Number(document.getElementById('canhb').value);
+        let c = Number(document.getElementById('canhc').value);
+        let kq = document.getElementById('ketqua');
+        if (a+b>c && a+c>b && b+c>a) {
+            if (a==b && a==c) {
+                kq.innerText ='a,b,c là tam giác đều'
+            } else if (a==b || a==c || b==c) {
+                kq.innerText = 'a,b,c là tam giác cân'
+            } else if ( a*a==(b*b)+(c*c) || b*b==(a*a)+(c*c) || c*c==(b*b)+(a*a) ) {
+                kq.innerText = 'a,b,c là tam giác vuông'
+            } else {
+                kq.innerText = 'a,b,c là một tam giác'
+            }
+
+        } else {
+            kq.innerText = 'Đây không phải là cạnh một tam giác'
+        }
+    }
+</script>

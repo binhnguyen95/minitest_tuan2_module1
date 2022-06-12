@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" placeholder="Cạnh a" id="soa">
+<input type="button" value="Bấm vào đêi" onclick="tinhketqua()"> <br>
+<p id="ketqua"></p>
+</body>
+</html>
+
+<script>
+    function tinhketqua() {
+        let a = document.getElementById('soa').value;
+        let chuvi = 4*a;
+        let dientich = a*a;
+        let kq = document.getElementById('ketqua');
+        if (a > 0) {
+            kq.innerText = 'Với cạnh a là ' +a+ ' ta có chu vi là ' +chuvi+ ' và diện tích là ' + dientich
+        } else {
+            kq.innerText = 'Invalid'
+        }
+    }
+</script>

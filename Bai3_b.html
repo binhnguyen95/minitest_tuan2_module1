@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" placeholder="Số a" id="soa">
+<input type="number" placeholder="Số b" id="sob">
+<input type="button" value="Bấm vào đêi" onclick="tinhketqua()"> <br>
+<p id="ketqua1"></p>
+<p id="ketqua2"></p>
+</body>
+</html>
+
+<script>
+    function tinhketqua() {
+        let a = document.getElementById('soa').value;
+        let b = document.getElementById('sob').value;
+        document.getElementById('ketqua1').innerText = Math.pow(a, 2)
+        document.getElementById('ketqua2').innerText = Math.pow(a, b)
+    }
+</script>

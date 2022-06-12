@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" placeholder="Cho biết số năm" id="sonam">
+<input type="button" value="Bấm vào đêi" onclick="tinhketqua()"> <br>
+<p id="ketqua"></p>
+</body>
+</html>
+
+<script>
+    function tinhketqua() {
+        let nam = Number(document.getElementById('sonam').value);
+        let theky = document.getElementById('ketqua');
+        if ( nam % 100 && nam == 0 ) {
+            theky.innerText = nam/100
+        } else {
+            theky.innerText = nam/100 + 1
+        }
+    }
+</script>

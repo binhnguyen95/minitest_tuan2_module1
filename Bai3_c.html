@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" placeholder="Số a" id="soa">
+<input type="number" placeholder="Số b" id="sob">
+<input type="button" value="Bấm vào đêi" onclick="tinhketqua()"> <br>
+<p id="ketqua"></p>
+</body>
+</html>
+
+<script>
+    function tinhketqua() {
+        let a = document.getElementById('soa').value;
+        let b = document.getElementById('sob').value;
+        let kq = document.getElementById('ketqua');
+        if (a>b) {
+            kq.innerText = 'Tổng các số là ' + ((a-b)+1)
+        } else {
+            kq.innerText = 'Tổng các số là ' + ((b-a)+1)
+        }
+    }
+</script>
